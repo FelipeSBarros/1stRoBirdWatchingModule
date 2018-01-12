@@ -4,7 +4,7 @@ def DoodleTest(newCandidate):
     print("testing if ", newCandidate, " is really new!")
     
     try:
-        con = lite.connect('/home/felipe/Raspberry/Robirdwatching/mydb.db')
+        con = lite.connect('/home/pi/Raspberry/1stRoBirdWatchingModule/mydb.db')
         cur = con.cursor()
         cur.execute("select count(*) from Metadata;")
         lID=cur.fetchone()

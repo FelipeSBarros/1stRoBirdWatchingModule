@@ -55,7 +55,7 @@ if testResult is None or testResult is False:
 
     try:
         print('Image saved; Saving data to SQLite')
-        con = lite.connect('/home/felipe/Raspberry/Robirdwatching/mydb.db')
+        con = lite.connect('/home/pi/Raspberry/1stRoBirdWatchingModule/mydb.db')
         cur = con.cursor()
         cur.execute("INSERT INTO Metadata(Date, Legend, Path) VALUES(?,?,?)",values)
         con.commit()
